@@ -5,11 +5,13 @@
 5.     If previousScore != -1 then
 6.         If score > previousScore then
 7.             trend = "Improving"
-8.         Else
+8.         Else if score < previousScore then
 9.             trend = "Declining"
-10.        End If
-11.    End If
-12.    previousScore = score
-13. End For
-14. Display trend
-15. End
+10.        Else
+11.            trend = "Stable"     // if–else modification
+12.        End If
+13.    End If
+14.    previousScore = score
+15. End For
+16. Display trend
+17. End
